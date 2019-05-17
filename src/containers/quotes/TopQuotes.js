@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Quotes from '../../components/quotes/Quotes';
+import Loading from '../../components/Loading';
 
 
 export default class TopQuotes extends PureComponenet {
