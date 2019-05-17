@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import TopQuotes from '../containers/quotes/TopQuotes';
-//TODO: bring in CharacterQuotes
-
+import CharacterQuotes from '../containers/quotes/CharacterQuotes';
 
 export default function App() {
   const [quotes, updateQuotes] = useState('top');
@@ -9,9 +8,9 @@ export default function App() {
   return (
     <>
       <button onClick={() => updateQuotes('top')}>Top Quotes</button>
-      {/* <button onClick={() => updateQuotes('character')}>Character Quotes</button> */}
+      <button onClick={() => updateQuotes('character')}>Character Quotes</button>
       {quotes === 'top' && <TopQuotes />}
-      {/* {quotes === 'character' && <CharacterQuotes />} */}
+      {quotes === 'character' && <CharacterQuotes />}
     </>
   );
 }

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Quotes from '../../components/quotes/Quotes';
 import Loading from '../../components/Loading';
-import { getCharacterQuotes } from '../../service/futuramaApi.js';
+import { getCharacterQuotes } from '../../services/futuramaApi.js';
 
-export default class CharacterQuotes extends PureComponenet {
+
+export default class CharacterQuotes extends PureComponent {
   static propTypes = {
     count: PropTypes.number
   }
@@ -14,6 +15,7 @@ export default class CharacterQuotes extends PureComponenet {
   }
 
   state = {
+    character: 'Fry',
     quotes: [],
     loading: true
   }
@@ -24,8 +26,9 @@ export default class CharacterQuotes extends PureComponenet {
     getCharacterQuotes(this.state.character, count)
       .then(quotes => this.setState({ quotes, loading: false }));
   }
-
-  componenetDidMount() {
+  
+  componentDidMount() {
+    console.log('hi');
     this.fetchQuotes();
   }
 
@@ -42,11 +45,11 @@ export default class CharacterQuotes extends PureComponenet {
   render() {
     const { character, quotes, loading } = this.state;
     if(loading) return <Loading />;
-
     const options = ['Fry', 'Bender', 'Leela', 'Amy', 'Hermes']
       .map(option => (
         <option key={option} value={option}>{option}</option>
       ));
+
 
     return (
       <>
