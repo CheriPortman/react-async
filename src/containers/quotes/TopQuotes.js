@@ -21,15 +21,17 @@ export default class TopQuotes extends PureComponent {
 
   fetchQuotes = () => {
     this.setState({ loading: true });
-    getQuotes(this.props.count)
+    getQuotes(this.props.count)  //this console logs to 10
       .then(quotes => this.setState({ quotes, loading: false }));
+    console.log('fetchQuotes', this.state);
   }
-
+  
   componentDidMount() {
     this.fetchQuotes();
   }
-
+  
   componentDidUpdate(prevProps) {
+    console.log('the problem is in componenetDidUpdate');
     if(prevProps.count !== this.props.count) {
       this.fetchQuotes();
     }

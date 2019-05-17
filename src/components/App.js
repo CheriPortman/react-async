@@ -9,7 +9,7 @@ export default function App() {
   return (
     <>
       <button onClick={() => updateQuotes('top')}>Top Quotes</button>
-      <button onClick={() => updateQuotes('character')}>Character Quotes</button>
+      {/* <button onClick={() => updateQuotes('character')}>Character Quotes</button> */}
       {quotes === 'top' && <TopQuotes />}
       {/* {quotes === 'character' && <CharacterQuotes />} */}
     </>
