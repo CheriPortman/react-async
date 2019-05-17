@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+//presentational component
+
 function Quote({ quote }) {
   return (
     <section>
