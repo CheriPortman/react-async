@@ -1,11 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-//display character, quote, and image
-//function with return-> section -> image/quote.character/quote.quote
-//Quote.propTypes -> character, quote, image, all required
-
 function Quote({ quote }) {
   return (
     <section>
@@ -25,5 +20,3 @@ Quote.propTypes = {
 };
 
 export default Quote;
-
-
