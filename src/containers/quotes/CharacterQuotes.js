@@ -4,7 +4,6 @@ import Quotes from '../../components/quotes/Quotes';
 import Loading from '../../components/Loading';
 import { getCharacterQuotes } from '../../services/futuramaApi.js';
 
-
 export default class CharacterQuotes extends PureComponent {
   static propTypes = {
     count: PropTypes.number
@@ -49,7 +48,6 @@ export default class CharacterQuotes extends PureComponent {
       .map(option => (
         <option key={option} value={option}>{option}</option>
       ));
-
 
     return (
       <>
