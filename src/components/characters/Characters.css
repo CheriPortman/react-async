@@ -3,14 +3,14 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  background-color: rgb(47, 136, 59);
+  background-color: powderblue;
 
   li {
     width: 20vw;
     margin: 2em;
     padding: 2rem;
 
-    background-color: darkgoldenrod;
+    background-color: plum;
 
     text-align: center;
 
