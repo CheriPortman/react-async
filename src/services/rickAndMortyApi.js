@@ -1,15 +1,14 @@
 export const getCharacters = (page = 1) => {
-  console.log('here');
   return fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {
-      if(!ok) throw 'unable to fetch characters';
+      if(!ok) throw 'Unable to fetch characters';
 
       return json;
     })
     .then(({ info, results }) => ({
       totalPages: info.pages,
-      character: results.map(character => ({
+      characters: results.map(character => ({
         name: character.name,
         species: character.species,
         status: character.status,

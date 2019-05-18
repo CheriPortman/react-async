@@ -3,6 +3,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
+  background-color: rgb(47, 136, 59);
 
   li {
     width: 20vw;
