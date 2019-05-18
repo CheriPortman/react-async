@@ -1,0 +1,38 @@
+.Characters {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: rgb(47, 136, 59);
+
+  li {
+    width: 20vw;
+    margin: 2em;
+    padding: 2rem;
+
+    background-color: darkgoldenrod;
+
+    text-align: center;
+
+    list-style-type: none;
+  }
+
+  section {
+    margin: auto;
+    animation: insert s linear;
+  }
+
+  img {
+    width: 10rem;
+    margin: auto;
+  }
+
+  @keyframes insert {
+    from {
+      width: 0;
+    }
+
+    to {width: 100%;
+    }
+  }
+}
