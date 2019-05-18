@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-//presentational componenet
-//display name, status, species, image
 function Character({ character }) {
   const {
     name,
