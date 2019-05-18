@@ -35,6 +35,12 @@ export default class AllCharacters extends PureComponent {
     this.fetchCharacters();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.currentPage !== this.state.currentPage) {
+      this.fetchCharacters();
+    }
+  }
+
   render() {
     const { 
       characters, 
