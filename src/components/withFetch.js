@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const withFetch = (fetchFn, initialState, key = 'results') => Comp => {
   class WithFetch extends Component {
     static propTypes = {
-      page: PropTypes.string.isRequired
+      page: PropTypes.number.isRequired
     }
 
     state = {
