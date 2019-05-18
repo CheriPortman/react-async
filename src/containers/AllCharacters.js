@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import Characters from '../components/characters/Characters';
 import Loading from '../components/Loading';
 import { getCharacters } from '../services/rickAndMortyApi';
+import Paging from '../components/paging/Paging';
 
 //add page to state and create buttons ti increment and decrement page
 //use page to page through api
@@ -52,13 +53,9 @@ export default class AllCharacters extends PureComponent {
 
     return (
       <>
-        {currentPage > 1 && 
-          <button onClick={() => this.nextPage(currentPage - 1)}>Previous Page</button>}
-        {`${currentPage} / ${totalPages}`}
-        {currentPage < totalPages &&
-          <button onClick={() => this.nextPage(currentPage + 1)}>Next Page</button>}
-          {/* {children} */}
-        <Characters characters={characters} />
+       <Paging currentPage={currentPage} totalPages={totalPages} nextPage={this.nextPage}>
+         <Characters characters={characters} />
+       </Paging>
       </>
     );
   }
