@@ -4,12 +4,6 @@ import Loading from '../components/Loading';
 import { getCharacters } from '../services/rickAndMortyApi';
 import Paging from '../components/paging/Paging';
 
-//add page to state and create buttons ti increment and decrement page
-//use page to page through api
-//can't to past last page
-//can't go before first page
-//make a paging componenet
-
 export default class AllCharacters extends PureComponent {
   state = {
     characters: [],
