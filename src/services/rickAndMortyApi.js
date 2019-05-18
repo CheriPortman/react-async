@@ -1,4 +1,5 @@
 export const getCharacters = (page = 1) => {
+  console.log('here');
   return fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
     .then(res => ([res.ok, res.json()]))
     .then(([ok, json]) => {

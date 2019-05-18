@@ -6,7 +6,7 @@ import styles from './Characters.css';
 //presentational component
 
 function Characters({ characters }) {
-  const characterList = character.map((character, i) => (
+  const characterList = characters.map((character, i) => (
     <li key={i}>
       <Character character={character} />
     </li>
